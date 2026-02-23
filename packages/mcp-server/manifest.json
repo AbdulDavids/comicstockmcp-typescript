@@ -1,22 +1,24 @@
 {
   "dxt_version": "0.2",
   "name": "comicstockmcp-mcp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official MCP Server for the Comic Stock API",
   "author": {
     "name": "Comic Stock"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/comicstockmcp-typescript.git"
+    "url": "git+https://github.com/AbdulDavids/comicstockmcp-typescript.git"
   },
-  "homepage": "https://github.com/stainless-sdks/comicstockmcp-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/AbdulDavids/comicstockmcp-typescript/tree/main/packages/mcp-server#readme",
   "server": {
     "type": "node",
     "entry_point": "index.js",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/index.js"],
+      "args": [
+        "${__dirname}/index.js"
+      ],
       "env": {
         "COMICSTOCKMCP_API_KEY": "${user_config.COMICSTOCKMCP_API_KEY}"
       }
@@ -37,5 +39,7 @@
       "node": ">=18.0.0"
     }
   },
-  "keywords": ["api"]
+  "keywords": [
+    "api"
+  ]
 }
