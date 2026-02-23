@@ -1,6 +1,6 @@
 {
   "name": "comicstockmcp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official TypeScript library for the Comic Stock API",
   "author": "Comic Stock <>",
   "types": "dist/index.d.ts",
