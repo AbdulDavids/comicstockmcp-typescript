@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3 (2026-02-24)
+
+Full Changelog: [v0.0.2...v0.0.3](https://github.com/AbdulDavids/comicstockmcp-typescript/compare/v0.0.2...v0.0.3)
+
+### Chores
+
+* **internal:** configure MCP Server hosting ([6268b7c](https://github.com/AbdulDavids/comicstockmcp-typescript/commit/6268b7cea0646aff72495fad604dfad34982e21a))
+
 ## 0.0.2 (2026-02-23)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/AbdulDavids/comicstockmcp-typescript/compare/v0.0.1...v0.0.2)
