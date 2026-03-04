@@ -6,6 +6,9 @@ import { APIPromise } from '../../core/api-promise';
 import { RequestOptions } from '../../internal/request-options';
 import { path } from '../../internal/utils/path';
 
+/**
+ * Aggregated back-office KPI metrics: recent orders, user activity, stock snapshot, revenue trends, AOV, fulfilment health, and supplier payment alerts.
+ */
 export class AvgOrderValue extends APIResource {
   /**
    * Get average order value (all customers)

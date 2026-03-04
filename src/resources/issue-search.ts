@@ -5,6 +5,9 @@ import { APIPromise } from '../core/api-promise';
 import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Typeahead search across comic issue titles. Used by autocomplete inputs in the admin portal.
+ */
 export class IssueSearch extends APIResource {
   /**
    * Returns matching comic issue titles for use in autocomplete/search inputs.

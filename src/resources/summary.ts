@@ -4,6 +4,9 @@ import { APIResource } from '../core/resource';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * High-level count summaries used by dashboard header cards (order status breakdown, supplier entity counts).
+ */
 export class Summary extends APIResource {
   /**
    * Returns a breakdown of customer orders by status (e.g. Pending, Shipped,

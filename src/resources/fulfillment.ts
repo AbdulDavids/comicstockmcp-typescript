@@ -6,6 +6,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Updates the fulfillment (delivery) status of a customer order. Used by the Fulfillment page to progress orders through shipping stages.
+ */
 export class Fulfillment extends APIResource {
   /**
    * Advances or updates the delivery status of a customer order (e.g. Pending →

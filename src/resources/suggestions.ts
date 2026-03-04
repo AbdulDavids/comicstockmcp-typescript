@@ -5,6 +5,9 @@ import { APIPromise } from '../core/api-promise';
 import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Smart reorder suggestions. Low-stock identifies issues near the reorder threshold weighted by recent sales velocity. Bestsellers ranks top-selling issues.
+ */
 export class Suggestions extends APIResource {
   /**
    * Returns the top N issues by units sold over the specified historical window.

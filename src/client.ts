@@ -786,20 +786,65 @@ export class ComicStock {
 
   static toFile = Uploads.toFile;
 
+  /**
+   * AI-powered comic issue analysis. Combines stock data, Grand Comics Database (GCD) scraping, and Azure OpenAI to produce a market-analysis report for a given issue.
+   */
   analysis: API.Analysis = new API.Analysis(this);
+  /**
+   * Scrapes upcoming comic issue data from the Grand Comics Database (GCD). Used as an enrichment source by the Analysis endpoint.
+   */
   comicsScraper: API.ComicsScraper = new API.ComicsScraper(this);
+  /**
+   * Read-only customer (user) data. Customers are created via the client portal; admin can browse and view details.
+   */
   customers: API.Customers = new API.Customers(this);
+  /**
+   * Aggregated back-office KPI metrics: recent orders, user activity, stock snapshot, revenue trends, AOV, fulfilment health, and supplier payment alerts.
+   */
   dashboard: API.Dashboard = new API.Dashboard(this);
+  /**
+   * Sends transactional emails and newsletter blasts via SMTP. Used by the Newsletters page in the admin portal.
+   */
   email: API.Email = new API.Email(this);
+  /**
+   * Updates the fulfillment (delivery) status of a customer order. Used by the Fulfillment page to progress orders through shipping stages.
+   */
   fulfillment: API.Fulfillment = new API.Fulfillment(this);
+  /**
+   * Returns raw issue + stock data for a given issue without AI enrichment. Lightweight alternative to the Analysis endpoint.
+   */
   issueAnalysis: API.IssueAnalysis = new API.IssueAnalysis(this);
+  /**
+   * Typeahead search across comic issue titles. Used by autocomplete inputs in the admin portal.
+   */
   issueSearch: API.IssueSearch = new API.IssueSearch(this);
+  /**
+   * Customer purchase order management. Browse, filter, view detail, update status, and edit line items.
+   */
   orders: API.Orders = new API.Orders(this);
+  /**
+   * Comic book inventory. An Issue represents a comic title/edition; each Issue has one or more StockItems keyed by condition (e.g. New, Good, Poor).
+   */
   stock: API.Stock = new API.Stock(this);
+  /**
+   * Smart reorder suggestions. Low-stock identifies issues near the reorder threshold weighted by recent sales velocity. Bestsellers ranks top-selling issues.
+   */
   suggestions: API.Suggestions = new API.Suggestions(this);
+  /**
+   * High-level count summaries used by dashboard header cards (order status breakdown, supplier entity counts).
+   */
   summary: API.Summary = new API.Summary(this);
+  /**
+   * Full supplier lifecycle: directory CRUD, price-quote management (batch CSV upload or individual update), restock order creation wizard, order state-machine transitions, payment recording, and quote-request workflows.
+   */
   suppliers: API.Suppliers = new API.Suppliers(this);
+  /**
+   * Discount voucher management. Browse vouchers, view individual detail, and retrieve aggregate stats (total issued / redeemed / expired).
+   */
   vouchers: API.Vouchers = new API.Vouchers(this);
+  /**
+   * Scaffolding endpoint — not used in production. Safe to ignore.
+   */
   weatherForecast: API.WeatherForecast = new API.WeatherForecast(this);
 }
 
