@@ -6,6 +6,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Comic book inventory. An Issue represents a comic title/edition; each Issue has one or more StockItems keyed by condition (e.g. New, Good, Poor).
+ */
 export class Stock extends APIResource {
   /**
    * Creates an issue record along with its initial stock items. Each stock item

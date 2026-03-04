@@ -7,6 +7,9 @@ import { AvgOrderValue } from './avg-order-value';
 import { APIPromise } from '../../core/api-promise';
 import { RequestOptions } from '../../internal/request-options';
 
+/**
+ * Aggregated back-office KPI metrics: recent orders, user activity, stock snapshot, revenue trends, AOV, fulfilment health, and supplier payment alerts.
+ */
 export class Dashboard extends APIResource {
   avgOrderValue: AvgOrderValueAPI.AvgOrderValue = new AvgOrderValueAPI.AvgOrderValue(this._client);
 

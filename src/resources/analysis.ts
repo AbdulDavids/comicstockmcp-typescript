@@ -6,6 +6,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * AI-powered comic issue analysis. Combines stock data, Grand Comics Database (GCD) scraping, and Azure OpenAI to produce a market-analysis report for a given issue.
+ */
 export class Analysis extends APIResource {
   /**
    * Orchestrates three data sources into a single analysis report:
