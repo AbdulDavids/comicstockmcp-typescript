@@ -153,7 +153,7 @@ const remoteStainlessHandler = async ({
     headers: {
       ...(reqContext.stainlessApiKey && { Authorization: reqContext.stainlessApiKey }),
       'Content-Type': 'application/json',
-      client_envs: JSON.stringify({
+      'x-stainless-mcp-client-envs': JSON.stringify({
         COMICSTOCKMCP_API_KEY: readEnv('COMICSTOCKMCP_API_KEY') ?? client.apiKey ?? undefined,
         COMIC_STOCK_BASE_URL: readEnv('COMIC_STOCK_BASE_URL') ?? client.baseURL ?? undefined,
       }),
