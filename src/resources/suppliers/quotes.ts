@@ -285,7 +285,7 @@ export interface QuoteSaveParams {
   /**
    * Must match the supplierId path parameter.
    */
-  body_supplierId?: number;
+  supplierId?: number;
 }
 
 export declare namespace Quotes {
