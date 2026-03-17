@@ -20,7 +20,7 @@ export const newMcpServer = async (stainlessApiKey: string | undefined) =>
   new McpServer(
     {
       name: 'comicstockmcp_api',
-      version: '0.0.4',
+      version: '0.1.0',
     },
     {
       instructions: await getInstructions(stainlessApiKey),
@@ -37,6 +37,7 @@ export async function initMcpServer(params: {
   clientOptions?: ClientOptions;
   mcpOptions?: McpOptions;
   stainlessApiKey?: string | undefined;
+  upstreamClientEnvs?: Record<string, string> | undefined;
 }) {
   const server = params.server instanceof McpServer ? params.server.server : params.server;
 
@@ -118,6 +119,7 @@ export async function initMcpServer(params: {
       reqContext: {
         client,
         stainlessApiKey: params.stainlessApiKey ?? params.mcpOptions?.stainlessApiKey,
+        upstreamClientEnvs: params.upstreamClientEnvs,
       },
       args,
     });
@@ -156,11 +158,16 @@ export async function initMcpServer(params: {
  * Selects the tools to include in the MCP Server based on the provided options.
  */
 export function selectTools(options?: McpOptions): McpTool[] {
-  const includedTools = [
-    codeTool({
-      blockedMethods: blockedMethodsForCodeTool(options),
-    }),
-  ];
+  const includedTools = [];
+
+  if (options?.includeCodeTool ?? true) {
+    includedTools.push(
+      codeTool({
+        blockedMethods: blockedMethodsForCodeTool(options),
+        codeExecutionMode: options?.codeExecutionMode ?? 'stainless-sandbox',
+      }),
+    );
+  }
   if (options?.includeDocsTools ?? true) {
     includedTools.push(docsSearchTool);
   }

@@ -7,6 +7,9 @@ import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
 import { path } from '../../internal/utils/path';
 
+/**
+ * Full supplier lifecycle: directory CRUD, price-quote management (batch CSV upload or individual update), restock order creation wizard, order state-machine transitions, payment recording, and quote-request workflows.
+ */
 export class Quotes extends APIResource {
   /**
    * Get a single supplier quote by ID
@@ -282,7 +285,7 @@ export interface QuoteSaveParams {
   /**
    * Must match the supplierId path parameter.
    */
-  body_supplierId?: number;
+  supplierId?: number;
 }
 
 export declare namespace Quotes {
