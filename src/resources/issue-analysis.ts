@@ -6,6 +6,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Returns raw issue + stock data for a given issue without AI enrichment. Lightweight alternative to the Analysis endpoint.
+ */
 export class IssueAnalysis extends APIResource {
   /**
    * Returns the issue record plus stock items and total order count. Faster and

@@ -5,6 +5,9 @@ import { APIPromise } from '../../../core/api-promise';
 import { RequestOptions } from '../../../internal/request-options';
 import { path } from '../../../internal/utils/path';
 
+/**
+ * Full supplier lifecycle: directory CRUD, price-quote management (batch CSV upload or individual update), restock order creation wizard, order state-machine transitions, payment recording, and quote-request workflows.
+ */
 export class Creation extends APIResource {
   /**
    * Returns all comic issues that have at least one supplier quote, paginated. Each

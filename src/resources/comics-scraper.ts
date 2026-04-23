@@ -5,6 +5,9 @@ import { APIPromise } from '../core/api-promise';
 import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Scrapes upcoming comic issue data from the Grand Comics Database (GCD). Used as an enrichment source by the Analysis endpoint.
+ */
 export class ComicsScraper extends APIResource {
   /**
    * Fetches a list of upcoming comic releases matching the query from the Grand

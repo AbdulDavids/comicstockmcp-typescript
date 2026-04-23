@@ -5,6 +5,9 @@ import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Read-only customer (user) data. Customers are created via the client portal; admin can browse and view details.
+ */
 export class Customers extends APIResource {
   /**
    * Get a single customer by ID

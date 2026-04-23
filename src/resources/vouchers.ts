@@ -6,6 +6,9 @@ import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Discount voucher management. Browse vouchers, view individual detail, and retrieve aggregate stats (total issued / redeemed / expired).
+ */
 export class Vouchers extends APIResource {
   /**
    * Get a single voucher by ID

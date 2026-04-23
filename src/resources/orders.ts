@@ -8,6 +8,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * Customer purchase order management. Browse, filter, view detail, update status, and edit line items.
+ */
 export class Orders extends APIResource {
   /**
    * Get customer order detail by ID

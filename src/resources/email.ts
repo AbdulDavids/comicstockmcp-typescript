@@ -5,6 +5,9 @@ import { APIPromise } from '../core/api-promise';
 import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Sends transactional emails and newsletter blasts via SMTP. Used by the Newsletters page in the admin portal.
+ */
 export class Email extends APIResource {
   /**
    * Send a transactional email

@@ -4,6 +4,9 @@ import { APIResource } from '../core/resource';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Scaffolding endpoint — not used in production. Safe to ignore.
+ */
 export class WeatherForecast extends APIResource {
   /**
    * Scaffolding weather forecast endpoint (not used)
